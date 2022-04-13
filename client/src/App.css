@@ -58,6 +58,14 @@
   margin-top: 10px;
 }
 
+.card_footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .alert {
   position: fixed;
   bottom: 10px;
@@ -101,4 +109,42 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
+}
+
+.expand {
+  transform: rotate(180deg);
+}
+
+.more_horiz {
+  transform: rotate(90deg);
+}
+
+.modal {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  max-width: 90%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.paper {
+  width: 100%;
+  padding: 0, 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.paper_header {
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

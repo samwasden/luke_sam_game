@@ -6,7 +6,7 @@ const teams = {
 
 class Unit {
     constructor(group, name, members, defenser, ranger, attackrr, attackcr, travelr, health, defense, range, attackr, attackc, travel) {
-        this.group = group
+        this.group = group;
         this.name = name;
         this.members = members;
         this.rolls = {
@@ -23,8 +23,11 @@ class Unit {
             "Close Attack": attackc,
             "Travel": travel,
         };
-        this.health = health
-        this.grouphealth = [health, health, health, health, health]
+        this.health = health;
+        this.grouphealth = [health, health, health, health, health];
+        this.afflictions = [];
+        this.actions = [];
+        this.turns = 2;
     }
 }
 
@@ -36,7 +39,12 @@ const chapters = {
             new Unit('Villager', 'Healer', 5, 0, 1, 1, 1, 2, 14, 0, 0, 0, 0, 4),
             new Unit('Villager', 'Cavalry', 5, 1, 0, 0, 1, 2, 24, 0, 0, 0, 12, 10)
         ],
-        dark: []
+        dark: [
+            new Unit('Orc', 'Archers', 5, 1, 2, 1, 1, 1, 12, 0, 10, 8, 0, 0),
+            new Unit('Orc', 'Footman', 5, 1, 0, 0, 1, 2, 16, 4, 0, 0, 8, 0),
+            new Unit('Orc', 'Magician', 5, 0, 1, 1, 1, 2, 14, 0, 0, 0, 0, 4),
+            new Unit('Orc', 'Riders', 5, 1, 0, 0, 1, 2, 24, 0, 0, 0, 12, 10)
+        ]
     },
     chapter_2: {
         light: [],

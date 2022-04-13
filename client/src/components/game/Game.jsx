@@ -25,7 +25,8 @@ export default function Game() {
     const [player, setplayer] = useState({
         name: '',
         team: '',
-        room: ''
+        room: '',
+        opponent: ''
     })
 
     const startGame = (room) => {
@@ -37,7 +38,11 @@ export default function Game() {
     }
 
     const selectTeam = (team, name) => {
-        setplayer({...player, team: team, name: name})
+        if (team === 'light') {
+            setplayer({...player, team: team, name: name, opponent: 'dark'})
+        } else {
+            setplayer({...player, team: team, name: name, opponent: 'light'})
+        }
         socket.emit('select_team', {room: player.room, team: team, name: name})
     }
 
